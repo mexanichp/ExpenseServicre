@@ -9,17 +9,24 @@ using Microsoft.Extensions.Logging;
 
 namespace ExpenseMailService.Api.Services
 {
+    /// <inheritdoc cref="IParseXmlService"/>
     public class ParseXmlService : IParseXmlService
     {
         private readonly ILogger<ParseXmlService> _logger;
         private readonly IConfiguration _configuration;
 
+        /// <summary>
+        /// Initialize ParseXmlService.
+        /// </summary>
+        /// <param name="logger">Logger to log errors or exceptions.</param>
+        /// <param name="configuration">Configuration to load XML specific tags.</param>
         public ParseXmlService(ILogger<ParseXmlService> logger, IConfiguration configuration)
         {
             _logger = logger;
             _configuration = configuration;
         }
 
+        /// <inheritdoc cref="IParseXmlService.TryParseExpenseDto"/>
         public bool TryParseExpenseDto(string data, out ExpenseDto dto, ModelStateDictionary modelState)
         {
             dto = null;
@@ -73,6 +80,7 @@ namespace ExpenseMailService.Api.Services
             }
         }
 
+        /// <inheritdoc cref="IParseXmlService.TryParseXmlDocument"/>
         public bool TryParseXmlDocument(string data, out XDocument document)
         {
             try

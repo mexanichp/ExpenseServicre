@@ -58,12 +58,22 @@ namespace ExpenseMailService.Api
                 options.PreSerializeFilters.Add((swaggerDoc, httpReq) =>
                     swaggerDoc.Host = httpReq.Host.Value);
                 options.PreSerializeFilters.Add((swaggerDoc, httpReq) =>
-                    swaggerDoc.Schemes = new[] { Uri.UriSchemeHttp });
+                    swaggerDoc.Schemes = new[] { Uri.UriSchemeHttps });
+
+                options.PreSerializeFilters.Add((swaggerDoc, httpReq) =>
+                    swaggerDoc.Info = new Info()
+                    {
+                        Contact = new Contact() { Email = "mexanichp@gmail.com", Name = "Mykhailo", Url = "https://www.linkedin.com/in/mykhailo-k-bb9705aa/" },
+                        Title = ".NET Core App made by mexanich.",
+                        License = new License { Name = "MIT", Url = "https://github.com/mexanichp/ExpenseServicre/blob/master/LICENSE.md" }
+                    });
+
             });
 
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "Expense API");
+                options.DocumentTitle = "ExpenseService API";
             });
         
 

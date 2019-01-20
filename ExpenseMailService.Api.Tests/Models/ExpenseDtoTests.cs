@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ExpenseMailService.Api.Models;
+﻿using ExpenseMailService.Api.Models;
 using NUnit.Framework;
 
 namespace ExpenseMailService.Api.Tests.Models

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using ExpenseMailService.Api.Controllers;
 using ExpenseMailService.Api.Models;
 using ExpenseMailService.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Moq;
-using Newtonsoft.Json;
 using NUnit.Framework;
 
 namespace ExpenseMailService.Api.Tests.Controllers

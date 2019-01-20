@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace ExpenseMailService.Api.Models
+﻿namespace ExpenseMailService.Api.Models
 {
     /// <summary>
     /// Expense object.

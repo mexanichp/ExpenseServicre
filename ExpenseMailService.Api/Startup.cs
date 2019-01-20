@@ -48,7 +48,7 @@ namespace ExpenseMailService.Api
                         {
                             "xml-like-content", new Schema
                             {
-                                Example = "Hi Yvaine,\r\nPlease create an expense claim for the below. Relevant details are marked up as\r\nrequested…\r\n<expense><cost_centre>DEV002</cost_centre>\r\n<total>1024.01</total><payment_method>personal card</payment_method>\r\n</expense>\r\nFrom: Ivan Castle\r\nSent: Friday, 16 February 2018 10:32 AM\r\nTo: Antoine Lloyd <Antoine.Lloyd@example.com>\r\nSubject: test\r\nHi Antoine,\r\nPlease create a reservation at the <vendor>Viaduct Steakhouse</vendor> our\r\n<description>development team’s project end celebration dinner</description> on\r\n<date>Tuesday 27 April 2017</date>. We expect to arrive around\r\n7.15pm. Approximately 12 people but I’ll confirm exact numbers closer to the day.\r\nRegards,\r\nIvan\r"
+                                Example = "Hi Yvaine, Please create an expense claim for the below. Relevant details are marked up as requested… <expense><cost_centre>DEV002</cost_centre> <total>1024.01</total><payment_method>personal card</payment_method> </expense> From: Ivan Castle Sent: Friday, 16 February 2018 10:32 AM To: Antoine Lloyd <Antoine.Lloyd@example.com> Subject: test Hi Antoine, Please create a reservation at the <vendor>Viaduct Steakhouse</vendor> our <description>development team’s project end celebration dinner</description> on <date>Tuesday 27 April 2017</date>. We expect to arrive around 7.15pm. Approximately 12 people but I’ll confirm exact numbers closer to the day. Regards, Ivan"
                             }
                         }
                     }
